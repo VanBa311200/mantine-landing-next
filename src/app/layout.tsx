@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Sora } from "next/font/google";
 import { ColorSchemeScript } from "@mantine/core";
+import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "@/components/providers";
 import "@mantine/core/styles.css";
 import "./globals.css";
@@ -36,6 +37,7 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
