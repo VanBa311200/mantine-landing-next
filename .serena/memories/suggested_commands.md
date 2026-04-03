@@ -1,0 +1,7 @@
+- Install deps: `npm install`
+- Dev server: `npm run dev`
+- Production build: `npm run build`
+- Run production server: `npm run start`
+- Lint: `npm run lint`
+- Git basics: `git status`, `git diff`, `git add <files>`, `git commit -m "..."`, `git push`
+- Windows shell in this environment uses bash syntax (forward slashes).

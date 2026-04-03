@@ -1,0 +1,4 @@
+- Language/style: TypeScript + TSX, functional React components, named section/layout components, semicolons and double quotes.
+- Imports: alias-style imports (`@/...`) and grouped component imports by feature/section.
+- UI pattern: composition of small section components under `src/components/sections` and layout components under `src/components/layout`.
+- Framework guidance: treat Next.js APIs as potentially changed (per AGENTS.md) and verify against current docs before coding.

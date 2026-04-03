@@ -1,0 +1,3 @@
+- Project purpose: Next.js app for a Mantine-based landing page/site (marketing-style sections like Hero, Features, Testimonials, Pricing, FAQ, CTA).
+- Stack: Next.js 16.2.2 (App Router), React 19.2.4, TypeScript 5, Mantine 9, Tabler Icons, Framer Motion, ESLint 9.
+- Repo notes: AGENTS.md warns that this project uses newer Next.js behavior; check docs under node_modules/next/dist/docs/ before implementing changes.
