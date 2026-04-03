@@ -1,3 +1,4 @@
+import * as Sentry from "@sentry/nextjs";
 import type { Metadata } from "next";
 import { DM_Sans, Sora } from "next/font/google";
 import { ColorSchemeScript } from "@mantine/core";
@@ -17,10 +18,26 @@ const displayFont = Sora({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+const isProduction = process.env.NODE_ENV === "production";
+
+const baseMetadata: Metadata = {
   title: "Aster Studio",
   description: "Modern product landing page built with Next.js and Mantine UI",
 };
+
+export function generateMetadata(): Metadata {
+  if (!isProduction) {
+    return baseMetadata;
+  }
+
+  return {
+    ...baseMetadata,
+    other: {
+      ...(baseMetadata.other ?? {}),
+      ...Sentry.getTraceData(),
+    },
+  };
+}
 
 export default function RootLayout({
   children,
