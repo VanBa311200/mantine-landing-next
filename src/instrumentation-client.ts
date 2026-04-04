@@ -14,8 +14,8 @@ const replaysOnErrorSampleRate = Number.parseFloat(
 if (isProduction) {
   Sentry.init({
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-    environment: process.env.SENTRY_ENVIRONMENT ?? process.env.NODE_ENV,
-    release: process.env.SENTRY_RELEASE,
+    environment: process.env.VERCEL_ENV,
+    release: process.env.VERCEL_GIT_COMMIT_SHA,
     sendDefaultPii: process.env.SENTRY_SEND_DEFAULT_PII === "true",
     tracesSampleRate: Number.isFinite(tracesSampleRate)
       ? tracesSampleRate
